@@ -1,0 +1,146 @@
+/* 🌀VARS */
+:root {
+	--white: #fff;
+	--dark: #333;
+	--grey: #b3b0b0;
+	--error: #ff3636;
+	--yellow: #ffb900;
+}
+
+/* 🌀GLOBALS */
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--dark);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+	margin: 0;
+}
+
+/* 🌀 GENERALS */
+#app {
+	padding: 15px 0;
+	max-width: 1170px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: auto;
+	width: 100%;
+}
+
+.app__title {
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+	line-height: 1;
+}
+
+.app__description {
+	margin-bottom: 10px;
+}
+
+.app__input {
+	border: 2px solid var(--grey);
+	padding: 15px 10px;
+	background-color: var(--white);
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	font-family: inherit;
+	font-size: 18px;
+	outline: none;
+	border-radius: 10px;
+}
+
+.app__input:hover,
+.app__input:focus {
+	border-color: var(--yellow);
+}
+
+.app__input:disabled {
+	background-color: rgba(182, 182, 182, 0.685);
+}
+
+.app__input.error {
+	border-color: var(--error);
+	color: var(--error);
+}
+
+.app__message {
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.app__message.error {
+	background-color: #ffb7b7;
+	color: #6a0101;
+}
+
+.app__message.success {
+	background-color: #a6ff94;
+	color: #1f7d0c;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.app__play {
+	margin-top: 5px;
+	border-radius: 10px;
+	border: 0;
+	width: 100%;
+	background-color: var(--yellow);
+	padding: 10px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: inherit;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
