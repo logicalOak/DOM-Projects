@@ -1,10 +1,59 @@
 /* 🌀VARS */
 :root {
-	--white: #fff;
-	--dark: #333;
-	--grey: #b3b0b0;
-	--error: #ff3636;
-	--yellow: #ffb900;
+	/* Colors */
+	--hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+	/* HSL color mode */
+	--first-color: hsl(var(--hue-color), 69%, 61%);
+	--first-color-second: hsl(var(--hue-color), 69%, 61%);
+	--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+	--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+	--title-color: hsl(var(--hue-color), 8%, 15%);
+	--text-color: hsl(var(--hue-color), 8%, 45%);
+	--text-color-light: hsl(var(--hue-color), 8%, 65%);
+	--input-color: hsl(var(--hue-color), 70%, 96%);
+	--body-color: hsl(var(--hue-color), 60%, 99%);
+	--container-color: #fff;
+	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+	/* Fonts  */
+	--body-font: "Poppins", sans-serif;
+
+	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+	--big-font-size: 2rem;
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1.125rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+	--smaller-font-size: 0.75rem;
+	/* Font weight */
+	--font-medium: 500;
+	--font-semi-bold: 600;
+
+	/* Margines Bottom  */
+	/* .25rem = 4px, .5rem  = 8px, .75rem = 12px ... */
+	--mb-0-25: 0.25rem;
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-0-1: 0.1rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
+
+	/* Font size for large devices */
+	@media screen and (min-width: 968px) {
+		:root {
+			--big-font-size: 3rem;
+			--h1-font-size: 2.25rem;
+			--h2-font-size: 1.5rem;
+			--h3-font-size: 1.25rem;
+			--normal-font-size: 1rem;
+			--small-font-size: 0.875rem;
+			--smaller-font-size: 0.813rem;
+		}
+	}
 }
 
 /* 🌀GLOBALS */
@@ -23,11 +72,12 @@ html {
 }
 
 body {
-	font-family: "Rubik", sans-serif;
+	font-family: var(--body-font);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 24px;
-	color: var(--dark);
+	color: var(--text-color);
+	background-color: var(--body-color);
 }
 
 img {
@@ -56,7 +106,7 @@ input[type="number"] {
 /* 🌀 GENERALS */
 #app {
 	padding: 15px 0;
-	max-width: 1170px;
+	max-width: 1150px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin: auto;
@@ -64,19 +114,20 @@ input[type="number"] {
 }
 
 .app__title {
-	font-size: 30px;
+	font-size: var(--h1-font-size);
 	font-weight: 500;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: var(--mb-2);
 	line-height: 1;
+	color: var(--title-color);
 }
 
 .app__description {
-	margin-bottom: 10px;
+	margin-bottom: var(--mb-2);
 }
 
 .app__input {
-	border: 2px solid var(--grey);
+	border: 2px solid var(--first-color);
 	padding: 15px 10px;
 	background-color: var(--white);
 	display: block;
@@ -133,7 +184,8 @@ input[type="number"] {
 	border-radius: 10px;
 	border: 0;
 	width: 100%;
-	background-color: var(--yellow);
+	background-color: var(--first-color);
+	color: var(--white);
 	padding: 10px;
 	font-size: 18px;
 	text-align: center;
@@ -143,4 +195,9 @@ input[type="number"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.app__play:hover,
+.app__play:focus {
+	background-color: var(--first-color-alt);
 }
