@@ -73,16 +73,10 @@ body.dark-theme {
 .change-theme {
 	font-size: 1.25rem;
 	color: var(--title-color);
-	margin-right: var(--mb-1-5);
 	cursor: pointer;
 }
 .change-theme:hover {
 	color: var(--first-color);
-}
-@media (min-width: 768px) {
-	.change-theme {
-		margin: 0;
-	}
 }
 
 /* 🌀GLOBALS */
@@ -256,3 +250,9 @@ input[type="number"] {
 .app__play:focus {
 	background-color: var(--first-color-alt);
 }
+
+/* .theme-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */

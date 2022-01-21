@@ -114,7 +114,7 @@ class GuessNumber {
 			<a class="header__logo">
 				<img alt="Dmitry Mozhnyy" src="images/logo.png">
 			</a>
-			<button>
+			<button class="theme-button">
 				<i class="uil uil-moon change-theme" id="theme-button"></i>
 			</button>
 		</header>
