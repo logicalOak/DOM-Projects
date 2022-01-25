@@ -250,9 +250,3 @@ input[type="number"] {
 .app__play:focus {
 	background-color: var(--first-color-alt);
 }
-
-/* .theme-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-} */
