@@ -1,0 +1,82 @@
+:root {
+	--color-green: #2a9d8f;
+	--color-yellow: #e9c46a;
+	--color-coral: #f4a261;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: none;
+}
+
+body {
+	background-color: #111;
+	color: #fff;
+}
+
+section {
+	height: 50vh;
+	margin: 5rem;
+	font-size: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.section1 {
+	background-color: var(--color-green);
+}
+.section1:hover ~ #circle {
+	background-color: var(--color-yellow);
+	transform: scale(0.5);
+}
+
+.section2 {
+	background-color: var(--color-yellow);
+}
+.section2:hover ~ #circle {
+	background: none;
+	box-shadow: 0 0 0 2px var(--color-coral);
+}
+
+.section3 {
+	background-color: var(--color-coral);
+}
+.section3:hover ~ #circle {
+	background-color: var(--color-green);
+	animation: pulse 2s infinite;
+}
+
+/* Styling the cursor circle */
+#circle {
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	top: 25rem;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: box-shadow ease-in 150ms, background ease-in 150ms,
+		transform ease-in 150ms;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.3;
+		transform: scale(0.5);
+	}
+	50% {
+		opacity: 0.9;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0.3;
+		transform: scale(0.5);
+	}
+}
